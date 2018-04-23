@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    position: absolute;
+    height: 10em;
+    color:#fff;
+    padding: 2em 5em;
+}
+
+nav .nav-header a {
+    color: white;
+    transition: all 1s ease-in-out;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: fantasy;
+    letter-spacing: 0.3em;
+}
+
+nav .nav-header a:hover {
+    text-decoration: none;
+    color: #FED766;
+}
+
+.yellow {
+    color: #FED766;
+}
+
+.hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #252a30;
+    color: white;
+    height: 100vh;
+    font-family: fantasy;
+    flex-direction: column-reverse;
+}
+
+.hero .desc {
+    width: 35%;
+}
+
+.hero .desc h1, .hero .desc h3 {
+    letter-spacing: .1em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.typed-desc {
+    letter-spacing: 0.1em;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.avatars {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    border: .5em solid #FED766;
+}
+
+.hero .avatar {
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero .socials {
+    position: relative;
+    top: 15%;
+    justify-self: flex-end;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .socials a {
+    padding: .5em;
+    height: 1.7em;
+    width: 1.7em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #252a30;
+    margin: .5em;
+    transition: all 1s ease-in-out;
+}
+
+.hero .socials a > i {
+    color: #fff;
+    font-size: 150%;
+}
+
+.hero .socials a:hover {
+    background-color: #FED766;
+}
+
+.hero .socials a:hover i {
+    color: #252a30;
+}
+
+.avatars .avatar:last-of-type {
+    animation: avatarFadeOut 4s ease-in-out infinite alternate;
+}
+
+@keyframes avatarFadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.about {
+    min-height: 10em;
+    background-color: #fff;
+    padding-top: 3em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+.about h1 {
+    color: #252a30;
+    font-family: fantasy, cursive, Helvetica, sans-serif;
+    font-weight: 800;
+    letter-spacing: .1em;
+    font-size: 200%;
+}
+
+.about p {
+    font-style: normal;
+    line-height: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: .1em;
+    width: 50%;
+    margin: 2.5em auto;
+}
+
+.about a {
+    text-decoration: none;
+    color: #252a30;
+    border-radius: 50px;
+    margin: 3.6rem 0 0;
+    padding: 1.0rem 2.6rem;
+    font-size: 1.1rem;
+    border: 2px solid #252a30;
+    transition: all .5s ease-in-out;
+    font-family: fantasy;
+}
+
+.about a:hover {
+    color: #fff;
+    background-color: #252a30;
+    border: 3px #252a30 solid;
+
+}
+
+footer {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    font-weight: bolder;
+    letter-spacing: .3em;
+    font-family: fantasy;
+}
+
+.divider {
+    width: 50%;
+}
