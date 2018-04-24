@@ -13,7 +13,7 @@
     }
 
     .hero .desc {
-        width: 90%;
+        width: 100%;
     }
     
     .hero .avatar {
@@ -58,8 +58,18 @@
     
     .about a {
         margin: 3.6rem 0 0;
-        padding: 0.5rem 2.0rem 0.3rem 2.0rem;
+        padding: 1.2rem 2.0rem 1rem 2.0rem;
         font-size: 0.9rem;
+    }
+
+    .about a:first-of-type {
+        color: #252a30;
+        background-color: #FED766;
+    }
+
+    .about a:first-of-type:hover {
+        color: #252a30;
+        background-color: #fff;
     }
 
     footer p {
