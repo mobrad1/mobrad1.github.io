@@ -1,3 +1,68 @@
-@media only screen and (min-width: 600px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    nav {
+        top: 3em;
+    }
+
+    nav .nav-header a {
+        font-size: 4rem;
+    }
+
+    .avatars {
+        width: 30em;
+        height: 30em;
+    }
+
+    .hero .desc {
+        width: 90%;
+    }
     
+    .hero .avatar {
+        height: 30em;
+        width: 30em;
+    }
+
+    .hero .desc h1 {
+        font-size: 400%;
+    }
+
+    .hero .desc h3 {
+        font-size: 300%;
+    }
+    
+    .hero .desc h1:hover, .hero .desc h3:hover {
+        color: #FED766;
+    }
+    
+    .hero .socials a {
+        padding: 2em;
+        height: 3em;
+        width: 3em;
+        margin: .5em;
+    }
+    
+    .hero .socials a > i {
+        font-size: 350%;
+    }
+
+    .about h1 {
+        font-size: 450%;
+        font-weight: bolder;
+    }
+
+    .about p {
+        width: 90%;
+        font-size: 200%;
+        line-height: 1.8em;
+        margin-top: 1em;
+    }
+    
+    .about a {
+        margin: 3.6rem 0 0;
+        padding: 0.5rem 2.0rem 0.3rem 2.0rem;
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 250%;
+    }
 }
