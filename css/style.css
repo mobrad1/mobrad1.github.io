@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+
 html, body {
     margin: 0px;
     padding: 0px;
@@ -21,9 +24,9 @@ nav .nav-header a {
     color: white;
     transition: all 1s ease-in-out;
     text-decoration: none;
-    font-size: 1.5rem;
-    font-family: fantasy;
-    letter-spacing: 0.3em;
+    font-size: 2rem;
+    font-family: "Cabin Sketch";
+    letter-spacing: .2em;
 }
 
 nav .nav-header a:hover {
@@ -43,7 +46,7 @@ nav .nav-header a:hover {
     background-color: #252a30;
     color: white;
     height: 100vh;
-    font-family: fantasy;
+    font-family: "Cabin Sketch";
     flex-direction: column-reverse;
 }
 
@@ -144,7 +147,7 @@ nav .nav-header a:hover {
 
 .about h1 {
     color: #252a30;
-    font-family: fantasy, cursive, Helvetica, sans-serif;
+    font-family: "Cabin Sketch", Helvetica, sans-serif;
     font-weight: 800;
     letter-spacing: .1em;
     font-size: 200%;
@@ -153,7 +156,7 @@ nav .nav-header a:hover {
 .about p {
     font-style: normal;
     line-height: 2em;
-    font-family: cursive, Helvetica, sans-serif;
+    font-family: "Lobster Two", Helvetica, sans-serif;
     letter-spacing: .1em;
     width: 50%;
     margin: 2.5em auto;
@@ -168,7 +171,7 @@ nav .nav-header a:hover {
     font-size: 1.1rem;
     border: 2px solid #252a30;
     transition: all .5s ease-in-out;
-    font-family: fantasy;
+    font-family: "Cabin Sketch";
 }
 
 .about a:last-of-type {
@@ -198,7 +201,7 @@ footer {
 footer p {
     font-weight: bolder;
     letter-spacing: .3em;
-    font-family: fantasy;
+    font-family: "Lobster Two";
 }
 
 .divider {
