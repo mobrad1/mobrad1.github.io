@@ -1,0 +1,146 @@
+:root {
+    --avatarHeight: 300px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Grande", sans-serif;
+}
+
+header.main {
+    display: flex;
+    height: 100vh;
+}
+
+.nav-arrow {
+    position: absolute;
+    bottom: 30px;
+    justify-self: center;
+    width: 30px;
+    left: calc(50% - 15px);
+    animation: bounce 1s cubic-bezier(0.71,-0.12, 0.58, 1) infinite alternate forwards;
+    cursor: pointer;
+}
+
+header.main .left-panel {
+    flex: 2;
+    flex-basis: calc(100% * (2/7));
+    background: linear-gradient(to bottom, #B20239 50%, #59011D);
+    height: 100%;
+    position: relative;
+    padding: 1.5em 3em;
+}
+
+header.main .right-panel {
+    flex: 5;
+    flex-basis: calc(100% * (5/7));
+    height: 100%;
+    padding-left: calc(var(--avatarHeight)/2 + 5em);
+    display: flex;
+    justify-content: center;
+    padding-right: 3em;
+    padding-top: 1.5em;
+    position: relative;
+    flex-direction: column;
+}
+
+header.main .left-panel .avatar-container {
+    width: var(--avatarHeight);
+    height: var(--avatarHeight);
+    position: absolute;
+    right: calc(-1 * var(--avatarHeight) / 2);
+    top: calc(50% - var(--avatarHeight) / 2);
+    border-radius: 50%;
+}
+
+.avatar-container .avatar {
+    width: 100%;
+    height: var(--avatarHeight);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.site-logo > h1 {
+    color: white;
+    font-family: Noteworthy, cursive;
+    text-transform: uppercase;
+}
+
+header.main .right-panel .main-nav {
+    position: absolute;
+    right: 3em;
+    top: 1.5em;
+    width: 250px;
+}
+
+.main-nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.main-nav ul li {
+    display: inline-flex;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #B20239;
+    text-transform: uppercase;
+    font-size: 90%;
+}
+
+.right-panel .text-container p:first-of-type {
+    font-family: Noteworthy, cursive;
+    text-transform: uppercase;
+}
+
+.right-panel .text-container h1 {
+    font-family: "Lucida Grande", sans-serif;
+    text-transform: uppercase;
+    font-size: 400%;
+    margin-bottom: .1em;
+    letter-spacing: .15em;
+}
+
+.right-panel .text-container p:last-of-type {
+    font-family: "Lucida Grande", sans-serif;
+    width: 70%;
+    font-size: 90%;   
+    line-height: 1.5em;
+    letter-spacing: .1em;
+    word-spacing: .2em; 
+}
+
+.right-panel .social-icons {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: 1.3em 4em;
+}
+
+.social-icon a {
+    border-radius: 25%;
+    background: #cd97b0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #59011D;
+}
+
+
+@keyframes bounce {
+    0% {
+        bottom: 20px;
+    }
+
+    100% {
+        bottom: 40px;
+    }
+}
