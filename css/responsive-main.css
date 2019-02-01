@@ -34,4 +34,19 @@
     .right-panel .social-icons {
         width: 100%;
     }
+
+    section.main .portfolio {
+        padding: 2em;
+    }
+
+    .portfolio .section-content {
+        grid-template-areas: "a" "b" "c" "d" "e";
+        width: 90%;
+    }
+
+    .portfolio .section-content .vert-2 {
+        grid-column: 1/1;
+        grid-row: 4/5;
+        height: 250px;
+    }
 }
