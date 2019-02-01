@@ -9,6 +9,10 @@
     font-family: "Lucida Grande", sans-serif;
 }
 
+.d-mobile {
+    display: none;
+}
+
 header.main {
     display: flex;
     height: 100vh;

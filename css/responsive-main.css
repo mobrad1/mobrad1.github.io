@@ -1,0 +1,37 @@
+@media only screen and (max-device-width : 480px) {
+    .d-mobile {
+        display: block;
+    }
+
+    header.main .left-panel {
+        display: none;
+    }
+
+    header.main .right-panel {
+        padding: 1em;
+        width: 100vw;
+        background: linear-gradient(to bottom, #B20239 50%, #59011D);
+    }
+
+    .site-logo {
+        position: absolute;
+        top: 2em;
+        left: 2em;
+    }
+
+    .text-container {
+        color: white;
+    }
+
+    .right-panel .text-container h1 {
+        font-size: 300%;
+    }
+
+    .right-panel .text-container p:last-of-type {
+        width: 100%;
+    }
+
+    .right-panel .social-icons {
+        width: 100%;
+    }
+}
