@@ -1,6 +1,10 @@
 @media only screen and (max-device-width : 480px) {
-    .d-mobile {
-        display: block;
+    nav .main-nav {
+        display: none;
+    }
+
+    nav {
+        padding: 1em;
     }
 
     header.main .left-panel {
@@ -11,12 +15,6 @@
         padding: 1em;
         width: 100vw;
         background: linear-gradient(to bottom, #B20239 50%, #59011D);
-    }
-
-    .site-logo {
-        position: absolute;
-        top: 2em;
-        left: 2em;
     }
 
     .text-container {
@@ -48,5 +46,36 @@
         grid-column: 1/1;
         grid-row: 4/5;
         height: 250px;
+    }
+
+    section.skills .section-content {
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 2em;
+        grid-row-gap: 2em;
+        width: 100%;
+    }    
+
+    section.testimonials {
+        padding: 4em 1em;
+    }
+
+    section.testimonials .section-content {
+        padding: 0;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial .avatar-container {
+        margin: 0;
+    }
+
+    .testimonial .text-content {
+        width: 100%;
+        margin-top: 1em;
     }
 }

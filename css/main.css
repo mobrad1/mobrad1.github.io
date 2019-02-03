@@ -28,6 +28,10 @@ a {
     color: var(--red);
 }
 
+.white {
+    color: white;
+}
+
 .btn {
     border-radius: 10px;
     border: .5px solid var(--red);
@@ -62,6 +66,33 @@ a {
 header.main {
     display: flex;
     height: 100vh;
+}
+
+nav {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    z-index: 20;
+    padding: 1em 3em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 25vw;
+}
+
+.main-nav ul li {
+    display: inline-flex;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--red);
+    text-transform: uppercase;
+    font-size: 90%;
 }
 
 .nav-arrow {
@@ -112,34 +143,22 @@ header.main .left-panel .avatar-container {
     object-fit: cover;
 }
 
+.main-ball {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--darkred);
+    position: absolute;
+    right: 0;
+    animation: headerOrbit 5s linear infinite forwards;
+    left: calc(50% - 5px);
+    top: calc(50% - 5px);
+}
+
 .site-logo > h1 {
     color: white;
     font-family: Noteworthy, cursive;
     text-transform: uppercase;
-}
-
-header.main .right-panel .main-nav {
-    position: absolute;
-    right: 3em;
-    top: 1.5em;
-    width: 250px;
-}
-
-.main-nav ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.main-nav ul li {
-    display: inline-flex;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: var(--red);
-    text-transform: uppercase;
-    font-size: 90%;
 }
 
 .right-panel .text-container p:first-of-type {
@@ -270,6 +289,150 @@ section.main {
     margin-bottom: 10px;
 }
 
+section.skills {
+    background: linear-gradient(120deg, var(--red) 40%, var(--darkred));
+    min-height: 100vh;
+}
+
+section.skills .section-content {
+    padding: 3em;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 4em;
+    width: 70%;
+    margin: 60px auto;
+}
+
+.skills .skill {
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1em;
+    font-family: Noteworthy, cursive;
+    position: relative;
+    grid-column: span 2;
+    justify-self: center;
+}
+
+.ball {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    left: 43px;
+    transform-origin: 0% -50px;
+    display: none;
+}
+
+.skills .skill:hover .ball {
+    display: inline-block;
+    animation: orbit 2s linear infinite;
+}
+
+section.testimonials .section-content {
+    padding: 3em;
+    margin-top: 4em;
+}
+
+.testimonial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial .avatar-container {
+    width: 150px;
+    height: 150px;
+    border-left: 3px solid var(--red);
+    border-right: 3px solid var(--darkred);
+    border-top: 3px solid var(--red);
+    border-bottom: 3px solid var(--darkred);
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+.testimonial img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.testimonial .text-content {
+    width: 50%;
+}
+
+.text-content .quote {
+    line-height: 35px;
+    font-family: Noteworthy, cursive;
+    font-size: 120%;
+    color: #7B7375;
+    letter-spacing: .1em;
+}
+
+.text-content .quote:before, .text-content .quote:after {
+    display: inline-block;
+    font-size: 15px;
+    opacity: .2;
+    transform: scale(3.0);
+    font-family: Noteworthy, cursive;
+    font-weight: bold;
+    color: var(--darkred);
+}
+
+
+.testimonial .text-content .quote::before {
+    content: "\201C";
+    margin-right: 10px;
+}
+
+.testimonial .text-content .quote::after {
+    content: "\201D";
+}
+
+.testimonial cite {
+    font-family: Noteworthy, cursive;
+    font-style: normal;
+    margin-top: 15px;
+    display: block;
+}
+
+.testimonial cite span {
+    font-family: Noteworthy, cursive;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 110%;
+}
+
+.testimonials .testimonial-controls {
+    display: flex;
+    position: relative;
+    top: -80px;
+}
+
+.testimonials .next-arrow {
+    margin-left: auto;
+}
+
+.testimonials .next-arrow img {
+    transform: rotate(270deg);
+    width: 2em;
+}
+
+footer {
+    padding: .2em;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, var(--lightred), var(--red), var(--darkred), var(--red), var(--lightred));
+}
+
 @keyframes bounce {
     0% {
         bottom: 20px;
@@ -277,5 +440,22 @@ section.main {
 
     100% {
         bottom: 40px;
+    }
+}
+
+@keyframes orbit {
+    from { transform: rotate(0deg) translateX(55px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(55px) rotate(-360deg); }
+}
+
+@keyframes headerOrbit {
+    from { transform: rotate(0deg) translateX(calc(var(--avatarHeight)/2)) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(calc(var(--avatarHeight)/2)) rotate(-360deg); }
+    55% {
+        background: white;
+    }
+
+    30% {
+        background: var(--lightred);
     }
 }
