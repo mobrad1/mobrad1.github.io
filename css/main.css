@@ -1,19 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Delius');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 :root {
     --avatarHeight: 300px;
     --red: #B20239;
     --darkred: #59011D;
     --lightred: #cd97b0;
+    --cursiveFont: Noteworthy, Delius, cursive;
+    --mainFont: "Lucida Grande", Lato, sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lucida Grande", sans-serif;
+    font-family: var(--mainFont);
 }
 
-.d-mobile {
-    display: none;
+html {
+    scroll-behavior: smooth;
 }
 
 a {
@@ -24,12 +29,32 @@ a {
     display: none; 
 }
 
+.d-mobile {
+    display: none;
+}
+
 .red {
     color: var(--red);
 }
 
 .white {
     color: white;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.hamburger ul {
+    cursor: pointer;
+}
+
+.hamburger li {
+    width: 2em;
+    height: .2em;
+    margin-bottom: .25em;
+    background: white;
+    display: block;
 }
 
 .btn {
@@ -95,6 +120,49 @@ nav {
     font-size: 90%;
 }
 
+.mobile-nav {
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: var(--darkred);
+    transition: 2s ease-in all;
+}
+
+.mobile-nav .close {
+    top: 2.5em;
+    right: 1em;
+    position: absolute;
+}
+
+.mobile-nav .close li:first-of-type {
+    transform: rotate(50deg) translateX(-5px);
+}
+
+.mobile-nav .close li:last-of-type {
+    transform: rotate(130deg) translateY(10px) translateX(-5px);
+}
+
+.mobile-nav ul {
+    color: white;
+}
+
+.mobile-nav .menu li {
+    display: block;
+    margin-bottom: 4em;
+    text-align: center;
+}
+
+.mobile-nav a:hover, .mobile-nav a:active {
+    font-size: 140%;
+    font-weight: bolder;
+}
+.mobile-nav a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 110%;
+}
+
 .nav-arrow {
     position: absolute;
     bottom: 30px;
@@ -157,17 +225,17 @@ header.main .left-panel .avatar-container {
 
 .site-logo > h1 {
     color: white;
-    font-family: Noteworthy, cursive;
+    font-family: var(--cursiveFont);
     text-transform: uppercase;
 }
 
 .right-panel .text-container p:first-of-type {
-    font-family: Noteworthy, cursive;
+    font-family: var(--cursiveFont);
     text-transform: uppercase;
 }
 
 .right-panel .text-container h1 {
-    font-family: "Lucida Grande", sans-serif;
+    font-family: var(--mainFont);
     text-transform: uppercase;
     font-size: 400%;
     margin-bottom: .1em;
@@ -175,7 +243,7 @@ header.main .left-panel .avatar-container {
 }
 
 .right-panel .text-container p:last-of-type {
-    font-family: "Lucida Grande", sans-serif;
+    font-family: var(--mainFont);
     width: 70%;
     font-size: 90%;   
     line-height: 1.5em;
@@ -201,6 +269,12 @@ header.main .left-panel .avatar-container {
     margin-right: 20px;
     text-decoration: none;
     color: var(--darkred);
+    transition: .5s ease-in-out all;
+}
+
+.social-icon a:hover {
+    color: white;
+    background: var(--darkred);
 }
 
 section.main {
@@ -223,6 +297,7 @@ section.main {
     /* padding: 1em .5em; */
     display: flex;
     align-items: flex-end;
+    overflow: hidden;
 }
 
 .portfolio .section-content .vert-2 {
@@ -255,24 +330,49 @@ section.main {
     height: 0;
     left: 0;
     position: absolute;
-    bottom: 0;
+    bottom: -2.5em;
     transition: 1s cubic-bezier(0.88,-0.42, 0.58, 1) all;
     box-shadow: 0px -1.5px 10px var(--darkred);
     color: white;
+    padding: 1em;
 }
 
-.portfolio-item .item-desc h4 {
-    font-size: 90%;
-    margin-top: 10px;
+.item-desc a {
+    color: var(--lightred);
 }
 
 .portfolio-item .item-desc p {
-    font-size: 90%;
-    margin-top: 10px;
+    font-size: 80%;
+}
+
+.portfolio-item .item-desc .stack {
+    margin-top: 20px;
+}
+
+.portfolio-item .item-desc .bottom {
+    position: absolute;
+    right: 1em;
+    font-size: 75%;
+    top: 65%;
+}
+
+.portfolio-item .item-desc .bottom a {
+    color: white;
+}
+
+.item-desc .label {
+    padding: .2em .5em;
+    border-radius: 10px;
+    box-shadow: .5px .5px 1px black;
+    border: .5px solid white;
+    color: white;
+    margin-right: .2em;
+    margin-bottom: .5em;
+    display: inline-block;
 }
 
 .portfolio .section-content > div:hover .item-desc{
-    height: 50%;
+    height: 70%;
 }
 
 .portfolio .section-content > div:hover {
@@ -314,7 +414,7 @@ section.skills .section-content {
     align-items: center;
     color: white;
     padding: 1em;
-    font-family: Noteworthy, cursive;
+    font-family: var(--cursiveFont);
     position: relative;
     grid-column: span 2;
     justify-self: center;
@@ -339,23 +439,35 @@ section.skills .section-content {
 section.testimonials .section-content {
     padding: 3em;
     margin-top: 4em;
+    height: 50vh;
+    position: relative;
 }
 
 .testimonial {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .5s ease-in-out all;
 }
 
 .testimonial .avatar-container {
     width: 150px;
     height: 150px;
+    margin-right: 50px;
+    position: relative;
+}
+
+.avatar-container .rotor {
+    animation: rotate 5s linear infinite forwards;
     border-left: 3px solid var(--red);
     border-right: 3px solid var(--darkred);
     border-top: 3px solid var(--red);
     border-bottom: 3px solid var(--darkred);
     border-radius: 50%;
-    margin-right: 50px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
 }
 
 .testimonial img {
@@ -371,7 +483,7 @@ section.testimonials .section-content {
 
 .text-content .quote {
     line-height: 35px;
-    font-family: Noteworthy, cursive;
+    font-family: var(--cursiveFont);
     font-size: 120%;
     color: #7B7375;
     letter-spacing: .1em;
@@ -382,7 +494,7 @@ section.testimonials .section-content {
     font-size: 15px;
     opacity: .2;
     transform: scale(3.0);
-    font-family: Noteworthy, cursive;
+    font-family: var(--cursiveFont);
     font-weight: bold;
     color: var(--darkred);
 }
@@ -398,23 +510,26 @@ section.testimonials .section-content {
 }
 
 .testimonial cite {
-    font-family: Noteworthy, cursive;
+    font-family: var(--cursiveFont);
     font-style: normal;
     margin-top: 15px;
     display: block;
 }
 
 .testimonial cite span {
-    font-family: Noteworthy, cursive;
+    font-family: var(--cursiveFont);
     font-weight: bolder;
     text-transform: uppercase;
     font-size: 110%;
 }
 
+
 .testimonials .testimonial-controls {
     display: flex;
-    position: relative;
-    top: -80px;
+    position: absolute;
+    bottom: 5em;
+    width: 80%;
+    margin-left: 10%;
 }
 
 .testimonials .next-arrow {
@@ -424,6 +539,14 @@ section.testimonials .section-content {
 .testimonials .next-arrow img {
     transform: rotate(270deg);
     width: 2em;
+}
+
+.testimonial {
+    display: none;
+}
+
+.testimonial.active {
+    display: flex;
 }
 
 footer {
@@ -458,4 +581,9 @@ footer {
     30% {
         background: var(--lightred);
     }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
 }

@@ -1,4 +1,8 @@
 @media only screen and (max-device-width : 480px) {
+    .d-mobile {
+        display: block;
+    }
+
     nav .main-nav {
         display: none;
     }
@@ -15,6 +19,27 @@
         padding: 1em;
         width: 100vw;
         background: linear-gradient(to bottom, #B20239 50%, #59011D);
+    }
+
+    .avatar-container {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+
+    .avatar-container .avatar {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .main-ball {
+        background: white;
+        position: absolute;
     }
 
     .text-container {
@@ -63,6 +88,7 @@
 
     section.testimonials .section-content {
         padding: 0;
+        height: 80vh;
     }
 
     .testimonial {
@@ -78,4 +104,10 @@
         width: 100%;
         margin-top: 1em;
     }
+
+    @keyframes headerOrbit {
+        from { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+        to   { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+    }
+
 }
