@@ -58,6 +58,11 @@
         width: unset;
     }
 
+    .social-icon a {
+        width: 30px;
+        height: 30px;
+    }
+
     section.main .portfolio {
         padding: 2em;
     }
