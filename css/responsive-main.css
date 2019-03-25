@@ -1,4 +1,4 @@
-@media only screen and (max-device-width : 480px) {
+@media only screen and (max-width : 800px) {
     .d-mobile {
         display: block;
     }
@@ -115,4 +115,24 @@
         to   { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
     }
 
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+
+    header.main .left-panel .avatar-container {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        right: calc(-1 * 200px / 2);
+        top: calc(50% - 200px / 2);
+        border-radius: 50%;
+    }
+
+    .avatar-container .avatar {
+        height: 200px;
+    }
+
+    .main-nav ul {
+        width: 30vw;
+    }
 }
