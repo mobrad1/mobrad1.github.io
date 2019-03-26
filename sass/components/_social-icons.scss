@@ -1,0 +1,31 @@
+.social-icons {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: 1.3rem 4rem;
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 3rem 2rem;
+    }
+
+    &__icon-link {
+        border-radius: 25%;
+        background: $color-primary-light;
+        width: 4.2rem;
+        height: 4.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 2rem;
+        text-decoration: none;
+        color: $color-primary-dark;
+        transition: .5s ease-in-out all;
+        font-size: 1.6rem;
+
+        &:hover {
+            color: $color-white;
+            background: $color-primary-dark;
+        }
+    }
+}

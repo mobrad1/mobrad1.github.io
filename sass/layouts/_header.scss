@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    height: 100vh;
+    position: relative;
+
+    &__left-panel {
+        flex: 2;
+        flex-basis: calc(100% * (2/7));
+        background: linear-gradient(to bottom, $color-primary 50%, $color-primary-dark);
+        height: 100%;
+        position: relative;
+        padding: 1.5rem 3rem;
+
+        @include respond(tab-port) {
+            width: 0;
+            flex: 0;
+            padding: 0;
+        }
+    }
+
+    &__right-panel {
+        flex: 5;
+        flex-basis: calc(100% * (5/7));
+        height: 100%;
+        padding-left: 20rem;
+        display: flex;
+        justify-content: center;
+        padding-top: 1.5rem;
+        position: relative;
+        flex-direction: column;
+
+        @include respond(tab-port) {
+            background: linear-gradient(to bottom, $color-primary 50%, $color-primary-dark); 
+            color: $color-white;    
+            padding: 0 2rem;   
+            width: 100vw;  
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        bottom: 3rem;
+        justify-self: center;
+        left: calc(50% - 15px);
+        animation: bounce 1s cubic-bezier(0.71,-0.12, 0.58, 1) infinite alternate forwards;
+
+        @include respond(tab-port) {
+            bottom: 5rem;
+        }
+    }
+}

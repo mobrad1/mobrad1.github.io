@@ -1,0 +1,29 @@
+body {
+    font-family: $mainFont;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.heading-primary {
+    font-family: $mainFont;
+    font-size: 6rem;
+    letter-spacing: .5rem;
+}
+
+.heading-secondary {
+    font-family: $mainFont;
+    font-size: 2.5rem;
+    letter-spacing: .15rem;
+}
+
+.heading-tertiary {
+    font-size: 2rem;
+}
+
+.paragraph-primary {
+    font-family: $mainFont;
+    font-size: 1.5rem; 
+    line-height: 2.5rem;
+    letter-spacing: .15rem;
+    word-spacing: .3rem;
+}

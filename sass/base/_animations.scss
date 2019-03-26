@@ -1,0 +1,36 @@
+@keyframes bounce {
+    0% {
+        bottom: 2rem;
+    }
+
+    100% {
+        bottom: 4rem;
+    }
+}
+
+@keyframes orbit {
+    from { transform: rotate(0deg) translateX(5.5rem) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(5.5rem) rotate(-360deg); }
+}
+
+@keyframes headerOrbit {
+    from { transform: rotate(0deg) translateX(11.5rem) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(11.5rem) rotate(-360deg); }
+    55% {
+        background: white;
+    }
+
+    30% {
+        background: $color-primary-light;
+    }
+}
+
+@keyframes headerOrbitTwo {
+    from { transform: rotate(0deg) translateX(5rem) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(5rem) rotate(-360deg); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}

@@ -1,0 +1,103 @@
+.testimonial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease-in-out all;
+    display: none;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__avatar-container {
+        width: 15rem;
+        height: 15rem;
+        margin-right: 5rem;
+        position: relative;
+
+        @include respond(tab-port) {
+            width: 10rem;
+            height: 10rem;
+            margin-right: 0;
+        }
+
+        &::after {
+            content: "";
+            animation: rotate 5s linear infinite forwards;
+            border-left: .3rem solid $color-primary;
+            border-right: .3rem solid $color-primary-dark;
+            border-top: .3rem solid $color-primary;
+            border-bottom: .3rem solid $color-primary-dark;
+            border-radius: 50%;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+        }
+    }
+
+    &__avatar {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    &__text {
+        width: 50%;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        &-quote {
+            line-height: 4rem;
+            font-family: $cursiveFont;
+            font-size: 2rem;
+            color: $color-gray-secondary;
+            letter-spacing: .1rem;
+
+            &::after, &::before {
+                display: inline-block;
+                font-size: 1.5rem;
+                opacity: .2;
+                transform: scale(3.0);
+                font-family: $cursiveFont;
+                font-weight: bold;
+                color: $color-primary-dark;
+            }
+
+            &::after {
+                content: "\201D";
+                margin-left: 1rem;
+            }
+
+            &::before {
+                content: "\201C";
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    &__testifier {
+
+        font-family: $cursiveFont;
+        font-style: normal;
+        margin-top: 2rem;
+        font-weight: bolder;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+
+        &-company {
+            font-family: $cursiveFont;
+            font-size: 1.5rem;
+            font-style: normal;
+        }
+    }
+}
+
+.testimonial.active {
+    display: flex;
+}

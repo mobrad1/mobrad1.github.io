@@ -1,0 +1,51 @@
+.red {
+    color: $color-primary;
+}
+
+.white {
+    color: $color-white;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.cursive {
+    font-family: $cursiveFont;
+}
+
+.mb-sm{
+    margin-bottom: 1.2rem;
+}
+
+.mt-sm {
+    margin-top: 1.2rem;
+}
+
+.mt-md {
+    margin-top: 1.6rem;
+}
+
+.ml-sm {
+    margin-top: 1.2rem;
+}
+
+.d-block {
+    display: block;
+}
+
+.w-70 {
+    width: 70%;
+
+    @include respond(tab-port) {
+        width: 100%;      
+    }
+}

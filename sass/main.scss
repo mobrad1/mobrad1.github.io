@@ -6,3 +6,17 @@
 @import "base/typography";
 @import "base/utilities";
 @import "base/animations";
+
+@import "components/social-icons";
+@import "components/avatar";
+@import "components/portfolio-card";
+@import "components/button";
+@import "components/skill";
+@import "components/testimonial";
+@import "components/nav-arrow";
+
+@import "layouts/header";
+@import "layouts/nav";
+@import "layouts/footer";
+
+@import "pages/home";

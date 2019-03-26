@@ -1,0 +1,25 @@
+.btn {
+    display: inline-block;
+    width: 20rem;
+    border-radius: 1rem;
+    border: .5px solid $color-primary;
+    padding: .8rem 1rem;
+    color: $color-primary;
+    transition: .5s ease-in all;
+    font-size: 1.6rem;
+
+    &:hover {
+        color: $color-white;
+        background: $color-primary;
+    }
+
+    &__red {
+        color: $color-white;
+        background: $color-primary;
+
+        &:hover {
+            color: $color-primary;
+            background: $color-white;
+        }
+    }
+}

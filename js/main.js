@@ -1,21 +1,21 @@
-const hamburger = document.querySelector('.hamburger ul');
-const hamburgerClose = document.querySelector('.hamburger.close ul');
-const headerBall = document.querySelector('.right-panel .main-ball');
-const mobileNav = document.querySelector('.mobile-nav');
-const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
-const testimonialsContainer = document.querySelector('.testimonials .section-content');
-const testimonialControlsContainer = testimonialsContainer.querySelector('.testimonial-controls');
-const testimonialControls = testimonialsContainer.querySelectorAll('.testimonial-controls a');
-const nextTestimonialControl = testimonialControlsContainer.querySelector('.next-arrow');
+const navLinks = document.querySelectorAll('.navigation__link');
+
+const testimonialsContainer = document.querySelector('.section-testimonials__testimonial-container');
+const testimonialControlsContainer = testimonialsContainer.querySelector('.section-testimonials__testimonial-controls');
+const nextTestimonialControl = document.querySelector('.section-testimonials__testimonial-controls-next');
 const numTestimonials = testimonialsContainer.querySelectorAll('.testimonial').length;
 
-const openMenu = () => {
-    mobileNav.style.display = 'flex';
-};
 
-const closeMenu = () => {
-    mobileNav.style.display = 'none';
-};
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        const navCheckbox = document.querySelector('.navigation__checkbox');
+        
+        if (navCheckbox) {
+            navCheckbox.checked = false;
+        }
+    });
+});
+
 
 const showNextTestimonial = (event) => {
     event.preventDefault();
@@ -34,12 +34,8 @@ const showNextTestimonial = (event) => {
 };
 
 
-hamburger.addEventListener('click', openMenu);
-hamburgerClose.addEventListener('click', closeMenu);
-mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
 
-
-// Hide controls if testimonials are less than one
+//Hide controls if testimonials are less than one
 if (numTestimonials < 2) {
     testimonialControlsContainer.style.display = 'none';
 } else {

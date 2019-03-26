@@ -7,294 +7,283 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/favicon.png"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/responsive-main.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/responsive-main.css" /> -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="main">
-        <nav>
-            <div class="site-logo">
-                <h1>Melas</h1>
-            </div>
-            <div class="main-nav">
-                <ul>
-                    <li><a href="#portfolio">portfolio</a></li>
-                    <li><a href="#skills">skills</a></li>
-                    <li><a href="#testimonials">testimonials</a></li>
-                </ul>
-            </div>
-            <div class="d-mobile hamburger">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-        </nav>
-        <nav class="mobile-nav">
-            <div class="d-mobile hamburger close">
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-            <ul class="menu">
-                <li><a href="#portfolio">portfolio</a></li>
-                <li><a href="#skills">skills</a></li>
-                <li><a href="#testimonials">testimonials</a></li>
-            </ul>
-        </nav>
-        <section class="left-panel">
+    <nav class="navigation">
+        <div class="navigation__site-logo">
+            <h1>Melas</h1>
+        </div>
+        <input type="checkbox" class="navigation__checkbox" id="navigation-toggler"/>
+        <ul class="navigation__nav">
+            <li class="navigation__item">
+                <a class="navigation__link" href="#portfolio">portfolio</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="#skills">skills</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#testimonials" class="navigation__link">testimonials</a>
+            </li>
+        </ul>
+        <label for="navigation-toggler" class="navigation__button">
+            <span class="navigation__icon"></span>
+        </label>
+    </nav>
+    
+    <header class="header">
+        <section class="header__left-panel">
             <div class="avatar-container">
-                <div class="main-ball"></div>
-                <img class="avatar" src="images/avatar.jpeg"/>
+                <div class="avatar-container__ball"></div>
+                <img class="avatar-container__avatar" src="images/avatar.jpeg"/>
             </div> 
         </section>
-        <section class="right-panel">
-            <div class="text-container">
-                <div class="avatar-container d-mobile">
-                    <div class="main-ball"></div>
-                    <img class="avatar" src="images/avatar.jpeg"/>
+        <section class="header__right-panel">
+            <div class="header__text-container">
+                <div class="avatar-container-small">
+                    <div class="avatar-container-small__ball"></div>
+                    <img class="avatar-container-small__avatar" src="images/avatar.jpeg"/>
                 </div>
-                <p>❤️ Your Favourite</p>
-                <h1>Developer</h1>
-                <p>
+                <p class="heading-tertiary uppercase cursive">❤️ Your Favourite</p>
+                <h1 class="heading-primary uppercase">Developer</h1>
+                <p class="paragraph-primary w-70">
                     I am committed to helping you thoroughly define your dreams, 
                     put your thoughts into perspective and bring your crazy ideas 
                     into reality.
                 </p>
             </div>
-            <div class="social-icons">
-                <div class="social-icon">
-                    <a href="https://github.com/ccmelas" title="Github" target="_blank">
+            <div class="social-icons mt-sm">
+                <div class="social-icons__icon">
+                    <a class="social-icons__icon-link" href="https://github.com/ccmelas" title="Github" target="_blank">
                         <i class="fa fa-github"></i>
                     </a>
                 </div>
-                <div class="social-icon">
-                    <a href="https://www.linkedin.com/in/chiemela-chinedum/" title="LinkedIn" target="_blank">
+                <div class="social-icons__icon">
+                    <a class="social-icons__icon-link" href="https://www.linkedin.com/in/chiemela-chinedum/" title="LinkedIn" target="_blank">
                         <i class="fa fa-linkedin"></i>
                     </a>
                 </div>
-                <div class="social-icon">
-                    <a href="mailto:chiemelachinedum@gmail.com" title="Email">
+                <div class="social-icons__icon">
+                    <a class="social-icons__icon-link" href="mailto:chiemelachinedum@gmail.com" title="Email">
                         <i class="fa fa-envelope"></i>
                     </a>
                 </div>
-                <div class="social-icon">
-                    <a href="https://twitter.com/ccmelas" title="Twitter" target="_blank">
+                <div class="social-icons__icon">
+                    <a class="social-icons__icon-link" href="https://twitter.com/ccmelas" title="Twitter" target="_blank">
                         <i class="fa fa-twitter"></i>
                     </a>
                 </div>
-                <div class="social-icon">
-                    <a href="https://www.instagram.com/ccmelas/" title="Instagram" target="_blank">
+                <div class="social-icons__icon">
+                    <a class="social-icons__icon-link" href="https://www.instagram.com/ccmelas/" title="Instagram" target="_blank">
                         <i class="fa fa-instagram"></i>
                     </a>
                 </div>
-                <div class="social-icon">
-                    <a href="https://web.facebook.com/chiemela.chinedum" title="Facebook" target="_blank">
+                <div class="social-icons__icon">
+                    <a class="social-icons__icon-link" href="https://web.facebook.com/chiemela.chinedum" title="Facebook" target="_blank">
                         <i class="fa fa-facebook"></i>
                     </a>
                 </div>
             </div>
         </section>
-        <a href="#portfolio">
-            <img class="nav-arrow" src="images/icons/arrow-down-sign-to-navigate.png"/>
+        <a href="#portfolio" class="header__arrow nav-arrow">
+            <img class="nav-arrow__image nav-arrow__down" src="images/icons/arrow-down-sign-to-navigate.png"/>
         </a>
     </header>
-    <section class="main portfolio" id="portfolio">
-        <div class="section-header red">
-            <h1>portfolio</h1>
-        </div>
-        <div class="section-content">
-            <div class="portfolio-item">
-                <div class="item-title">
+
+    <section class="section-portfolio" id="portfolio">
+        <h1 class="heading-secondary red uppercase text-center">portfolio</h1>
+        <div class="section-portfolio__portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-card__title">
                     <h4>iMonsterDeals (Beta)</h4>
                 </div>
-                <img class="item-image" src="images/projects/deals.jpg"/>
-                <div class="item-desc">
-                    <p>Ecommerce Application (Beta)</p>
-                    <p class="stack">
-                        <a href="#" class="label">Laravel</a>
-                        <a href="#" class="label">VueJS</a>
-                        <a href="#" class="label">MySQL</a>
-                        <a href="#" class="label">Stripe</a>
+                <img class="portfolio-card__image" src="images/projects/deals.jpg"/>
+                <div class="portfolio-card__desc">
+                    <p class="portfolio-card__desc-title">Ecommerce Application (Beta)</p>
+                    <p class="portfolio-card__desc-stack">
+                        <a href="#" class="portfolio-card__desc-label">Laravel</a>
+                        <a href="#" class="portfolio-card__desc-label">VueJS</a>
+                        <a href="#" class="portfolio-card__desc-label">MySQL</a>
+                        <a href="#" class="portfolio-card__desc-label">Stripe</a>
                     </p>
                     <p class="text-left bottom">
-                        <a href="#" target="_blank">Protected 🔒</a>
+                        <a class="portfolio-card__desc-link" href="https://imonsterdeals.com" target="_blank">See Project →</a>
                     </p>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <div class="item-title">
+            <div class="portfolio-card">
+                <div class="portfolio-card__title">
                     <h4>Laravel Sharenet</h4>
                 </div>
-                <img class="item-image" src="images/projects/default.jpg"/>
-                <div class="item-desc">
-                    <p>
+                <img class="portfolio-card__image" src="images/projects/default.jpg"/>
+                <div class="portfolio-card__desc">
+                    <p class="portfolio-card__desc-title">
                         Laravel Package that makes SMS Integration with
                         <a href="https://app.sharenet.io" target="_blank">Sharenet</a> a breeze.
                     </p>
-                    <p class="stack">
-                        <a href="#" class="label">Laravel</a>
-                        <a href="#" class="label">GuzzleHttp</a>
+                    <p class="portfolio-card__desc-stack">
+                        <a href="#" class="portfolio-card__desc-label">Laravel</a>
+                        <a href="#" class="portfolio-card__desc-label">GuzzleHttp</a>
                     </p>
                     <p class="text-left bottom">
-                        <a href="https://github.com/ccmelas/laravel-sharenet" target="_blank">See Project →</a>
+                        <a class="portfolio-card__desc-link" href="https://github.com/ccmelas/laravel-sharenet" target="_blank">See Project →</a>
                     </p>
                 </div>
             </div>
-            <div class="portfolio-item vert-2">
-                <div class="item-title">
+            <div class="portfolio-card vert-2">
+                <div class="portfolio-card__title">
                     <h4>Portfolio Website</h4>
                 </div>
-                <img class="item-image" src="images/projects/portfolio.jpg"/>
-                <div class="item-desc">
-                    <p>Single Page Website showcasing my Portfolio</p>
-                    <p class="stack">
-                        <a href="#" class="label">HTML5</a>
-                        <a href="#" class="label">CSS3</a>
-                        <a href="#" class="label">JavaScript</a>
+                <img class="portfolio-card__image" src="images/projects/portfolio.jpg"/>
+                <div class="portfolio-card__desc">
+                    <p class="portfolio-card__desc-title">Single Page Website showcasing my Portfolio</p>
+                    <p class="portfolio-card__desc-stack">
+                        <a href="#" class="portfolio-card__desc-label">HTML5</a>
+                        <a href="#" class="portfolio-card__desc-label">CSS3</a>
+                        <a href="#" class="portfolio-card__desc-label">JavaScript</a>
                     </p>
                     <p class="text-left bottom">
-                        <a href="http://melas.me" target="_blank">See Project →</a>
+                        <a class="portfolio-card__desc-link" href="http://melas.me" target="_blank">See Project →</a>
                     </p>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <div class="item-title">
+            <div class="portfolio-card">
+                <div class="portfolio-card__title">
                     <h4>Next Payday</h4>
                 </div>
-                <img class="item-image" src="images/projects/npd.jpg"/>
-                <div class="item-desc">
-                    <p>
+                <img class="portfolio-card__image" src="images/projects/npd.jpg"/>
+                <div class="portfolio-card__desc">
+                    <p class="portfolio-card__desc-title">
                         Loan Management System for Civil Servants  
                     </p>
-                    <p class="stack">
-                        <a href="#" class="label">Laravel</a>
-                        <a href="#" class="label">VueJS</a>
-                        <a href="#" class="label">MySQL</a>
+                    <p class="portfolio-card__desc-stack">
+                        <a href="#" class="portfolio-card__desc-label">Laravel</a>
+                        <a href="#" class="portfolio-card__desc-label">VueJS</a>
+                        <a href="#" class="portfolio-card__desc-label">MySQL</a>
                     </p>
                     <p class="text-left bottom">
-                        <a href="https://app.unicredit.ng" target="_blank">See Project →</a>
+                        <a class="portfolio-card__desc-link" href="https://app.unicredit.ng" target="_blank">See Project →</a>
                     </p>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <div class="item-title">
+            <div class="portfolio-card">
+                <div class="portfolio-card__title">
                     <h4>Salad Freak</h4>
                 </div>
-                <img class="item-image" src="images/projects/default.jpg"/>
-                <div class="item-desc">
-                    <p>
+                <img class="portfolio-card__image" src="images/projects/default.jpg"/>
+                <div class="portfolio-card__desc">
+                    <p class="portfolio-card__desc-title">
                         NodeJS/Mongodb API for the Salad Freak Application (Beta).
                     </p>
-                    <p class="stack">
-                        <a href="#" class="label">NodeJS</a>
-                        <a href="#" class="label">Mongodb</a>
-                        <a href="#" class="label">ES6</a>
-                        <a href="#" class="label">Paystack</a>
+                    <p class="portfolio-card__desc-stack">
+                        <a href="#" class="portfolio-card__desc-label">NodeJS</a>
+                        <a href="#" class="portfolio-card__desc-label">Mongodb</a>
+                        <a href="#" class="portfolio-card__desc-label">ES6</a>
+                        <a href="#" class="portfolio-card__desc-label">Paystack</a>
                     </p>
                     <p class="text-left bottom">
-                        <a href="#" target="_blank">Protected 🔒</a>
+                        <a class="portfolio-card__desc-link" href="#" target="_blank">Protected 🔒</a>
                     </p>
                 </div>
             </div>
         </div>
-        <div class="section-footer">
-            <div class="button group">
-                <a class="btn btn-red" href="/pdfs/CV.pdf">My CV</a>
-                <a class="btn" target="_blank" href="https://resume.github.io/?ccmelas">Github Resume</a>
-            </div>
+        <div class="section-portfolio__footer text-center">
+            <a class="btn btn__red mb-sm" href="/pdfs/CV.pdf">My CV</a>
+            <a class="btn mb-sm ml-sm" target="_blank" href="https://resume.github.io/?ccmelas">Github Resume</a>
         </div>
     </section>
-    <section class="main skills" id="skills">
-        <div class="section-header white">
-            <h1>skills</h1>
-        </div>
-        <div class="section-content">
+
+    <section class="section-skills" id="skills">
+        <h1 class="heading-secondary white uppercase text-center">Skills</h1>
+        <div class="section-skills__skills-grid">
             <div class="skill">
-                <div class="ball"></div>
+                <div class="skill__ball"></div>
                 HTML5
             </div>
             <div class="skill">
-                <div class="ball"></div>
+                <div class="skill__ball"></div>
                 CSS3
             </div>
             <div class="skill">
-                <div class="ball"></div>
+                <div class="skill__ball"></div>
                 JavaScript
             </div>
             <div class="skill">
-                <div class="ball"></div>
+                <div class="skill__ball"></div>
                 PHP
             </div>
             <div class="skill">
-                <div class="ball"></div>
+                <div class="skill__ball"></div>
                 Laravel
             </div>
             <div class="skill">
-                <div class="ball"></div>
+                <div class="skill__ball"></div>
                 NodeJs
             </div>
             <div class="skill">
-                <div class="ball"></div>
+                <div class="skill__ball"></div>
                 Mongodb
             </div>
             <div class="skill">
-                <div class="ball"></div>
+                <div class="skill__ball"></div>
                 SQL
             </div>
             <div class="skill">
-                <div class="ball"></div>
+                <div class="skill__ball"></div>
                 MySQL
             </div>
             <div class="skill">
-                <div class="ball"></div>
+                <div class="skill__ball"></div>
                 VueJS
             </div>
             <div class="skill">
-                <div class="ball"></div>
+                <div class="skill__ball"></div>
                 React
             </div>
             <div class="skill">
-                <div class="ball"></div>
+                <div class="skill__ball"></div>
                 <span style="font-size: 150%;">😇</span>
             </div>
         </div>
     </section>
-    <section class="main testimonials" id="testimonials">
-        <div class="section-header red">
-            <h1>testimonials</h1>
-        </div>
-        <div class="section-content">
+    
+    <section class="section-testimonials" id="testimonials">
+        <h1 class="heading-secondary red uppercase text-center mt-md">Testimonials</h1>
+        
+        <div class="section-testimonials__testimonial-container">
             <div class="testimonial active">
-                <div class="avatar-container">
-                    <div class="rotor"></div>
-                    <img class="" src="images/testimonials/bruce.jpg"/>
+                <div class="testimonial__avatar-container">
+                    <img class="testimonial__avatar" src="images/testimonials/bruce.jpg"/>
                 </div>
-                <div class="text-content">
+                <div class="testimonial__text">
                     <blockquote>
-                        <p class="quote">
+                        <p class="testimonial__text-quote">
                             Striving for excellence is a virtue.
                             I have watched him show grit at every stage of his work/learning in Olotu Square as a developer. 
                             He is currently the best around. He is highly recommended and guaranteed from me
                         </p>
-                        <cite>
-                            <span>Bruce Lucas</span><br>
-                            CEO, Olotu Software Technologies
+                        <cite class="mt-md d-block">
+                            <span class="testimonial__testifier">Bruce Lucas</span><br>
+                            <span class="testimonial__testifier-company">CEO, Olotu Software Technologies</span>
                         </cite>        
                     </blockquote>  
                 </div>
             </div>
-            <div class="testimonial-controls">
-                <a href="#" class="next-arrow">
-                    <img src="images/icons/arrow-down-sign-to-navigate.png" alt="Next arrow"/>
+            <div class="section-testimonials__testimonial-controls">
+                <!-- <a href="#" class="nav-arrow section-testimonials__testimonial-controls-control">
+                    <img class="nav-arrow__image nav-arrow__prev" src="images/icons/arrow-down-sign-to-navigate.png" alt="Next arrow"/>
+                </a> -->
+                <a href="#" class="nav-arrow section-testimonials__testimonial-controls-next">
+                    <img class="nav-arrow__image nav-arrow__next" src="images/icons/arrow-down-sign-to-navigate.png" alt="Next arrow"/>
                 </a>
             </div>
         </div>
     </section>
-    <footer>
-        <p>Made with  ❤️ by ccmelas</p>
+    
+    <footer class="footer">
+        <p class="footer__text text-center">Made with  ❤️ by ccmelas</p>
     </footer>
     <script src="js/main.js"></script>
 </body>

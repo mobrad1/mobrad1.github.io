@@ -1,0 +1,32 @@
+.skill {
+    border: .2rem solid white;
+    border-radius: 50%;
+    display: flex;
+    height: 10rem;
+    width: 10rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    font-family: $cursiveFont;
+    position: relative;
+    grid-column: span 2;
+    justify-self: center;
+    font-size: 1.5rem;
+
+    &__ball {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: white;
+        position: absolute;
+        left: 4.3rem;
+        transform-origin: 0% -5rem;
+        display: none;
+    }
+
+    &:hover &__ball {
+        display: inline-block;
+        animation: orbit 2s linear infinite;
+    }
+}
