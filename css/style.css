@@ -73,7 +73,7 @@ body {
   word-spacing: .3rem; }
 
 .red {
-  color: #B20239; }
+  color: #2882d6; }
 
 .white {
   color: #fff; }
@@ -131,7 +131,7 @@ body {
   55% {
     background: white; }
   30% {
-    background: #cd97b0; } }
+    background: #7ea4eb; } }
 
 @keyframes headerOrbitTwo {
   from {
@@ -156,7 +156,7 @@ body {
       padding: 3rem 2rem; } }
   .social-icons__icon-link {
     border-radius: 25%;
-    background: #cd97b0;
+    background: #7ea4eb;
     width: 4.2rem;
     height: 4.2rem;
     display: flex;
@@ -164,12 +164,12 @@ body {
     justify-content: center;
     margin-right: 2rem;
     text-decoration: none;
-    color: #59011D;
+    color: #16598f;
     transition: .5s ease-in-out all;
     font-size: 1.6rem; }
     .social-icons__icon-link:hover {
       color: #fff;
-      background: #59011D; }
+      background: #16598f; }
 
 .avatar-container {
   width: 230px;
@@ -187,7 +187,7 @@ body {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #59011D;
+    background: #16598f;
     position: absolute;
     right: 0;
     animation: headerOrbit 5s linear infinite forwards;
@@ -254,20 +254,20 @@ body {
     height: 100%;
     z-index: -1; }
   .portfolio-card__desc {
-    background: linear-gradient(to bottom right, #B20239 60%, #59011D);
+    background: linear-gradient(to bottom right, #2882d6 60%, #16598f);
     width: 100%;
     height: 0;
     left: 0;
     position: absolute;
     bottom: -2.5rem;
     transition: 1s cubic-bezier(0.88, -0.42, 0.58, 1) all;
-    box-shadow: 0rem -0.15rem 1rem #59011D;
+    box-shadow: 0rem -0.15rem 1rem #16598f;
     color: #fff;
     padding: 1rem; }
     .portfolio-card__desc-title {
       font-size: 1.2rem; }
     .portfolio-card__desc-title > a {
-      color: #cd97b0; }
+      color: #7ea4eb; }
     .portfolio-card__desc-stack {
       margin-top: 2rem; }
     .portfolio-card__desc-link {
@@ -302,19 +302,19 @@ body {
   display: inline-block;
   width: 20rem;
   border-radius: 1rem;
-  border: 0.5px solid #B20239;
+  border: 0.5px solid #2882d6;
   padding: .8rem 1rem;
-  color: #B20239;
+  color: #2882d6;
   transition: .5s ease-in all;
   font-size: 1.6rem; }
   .btn:hover {
     color: #fff;
-    background: #B20239; }
+    background: #2882d6; }
   .btn__red {
     color: #fff;
-    background: #B20239; }
+    background: #2882d6; }
     .btn__red:hover {
-      color: #B20239;
+      color: #2882d6;
       background: #fff; }
 
 .skill {
@@ -368,15 +368,16 @@ body {
     .testimonial__avatar-container::after {
       content: "";
       animation: rotate 5s linear infinite forwards;
-      border-left: 0.3rem solid #B20239;
-      border-right: 0.3rem solid #59011D;
-      border-top: 0.3rem solid #B20239;
-      border-bottom: 0.3rem solid #59011D;
+      border-left: 0.3rem solid #2882d6;
+      border-right: 0.3rem solid #16598f;
+      border-top: 0.3rem solid #2882d6;
+      border-bottom: 0.3rem solid #16598f;
       border-radius: 50%;
       position: absolute;
       width: 100%;
       height: 100%;
-      top: 0; }
+      top: 0;
+      left: 0; }
   .testimonial__avatar {
     width: 100%;
     height: 100%;
@@ -401,7 +402,7 @@ body {
         transform: scale(3);
         font-family: Noteworthy, Delius, cursive;
         font-weight: bold;
-        color: #59011D; }
+        color: #16598f; }
       .testimonial__text-quote::after {
         content: "\201D";
         margin-left: 1rem; }
@@ -439,7 +440,7 @@ body {
   .header__left-panel {
     flex: 2;
     flex-basis: calc(100% * (2/7));
-    background: linear-gradient(to bottom, #B20239 50%, #59011D);
+    background: linear-gradient(to bottom, #2882d6 50%, #16598f);
     height: 100%;
     position: relative;
     padding: 1.5rem 3rem; }
@@ -460,7 +461,7 @@ body {
     flex-direction: column; }
     @media only screen and (max-width: 56.25em) {
       .header__right-panel {
-        background: linear-gradient(to bottom, #B20239 50%, #59011D);
+        background: linear-gradient(to bottom, #2882d6 50%, #16598f);
         color: #fff;
         padding: 0 2rem;
         width: 100vw; } }
@@ -515,7 +516,7 @@ body {
         position: absolute;
         top: 0;
         left: 0;
-        background: #59011D;
+        background: #16598f;
         display: none; } }
     @media only screen and (max-width: 37.5em) {
       .navigation__nav {
@@ -526,7 +527,7 @@ body {
       .navigation__item {
         margin-top: 4rem; } }
   .navigation__link {
-    color: #B20239;
+    color: #2882d6;
     text-transform: uppercase;
     font-size: 1.6rem; }
     @media only screen and (max-width: 56.25em) {
@@ -575,7 +576,7 @@ body {
   padding: .2rem;
   font-size: 1.6rem;
   color: #fff;
-  background: linear-gradient(to right, #cd97b0, #B20239, #59011D, #B20239, #cd97b0); }
+  background: linear-gradient(to right, #7ea4eb, #2882d6, #16598f, #2882d6, #7ea4eb); }
 
 .section-portfolio {
   padding: 6rem;
@@ -592,7 +593,7 @@ body {
         width: 90%; } }
 
 .section-skills {
-  background: linear-gradient(120deg, #B20239 40%, #59011D);
+  background: linear-gradient(120deg, #2882d6 40%, #16598f);
   padding: 6rem; }
   .section-skills__skills-grid {
     padding: 3rem;
